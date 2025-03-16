@@ -16,7 +16,7 @@ if [ "$#" == 1 ]; then
 	get_subdomain_info "$1" "www"
 
 	elif [ "$#" == 2 ]; then
-		get_subdomain_info "$2" "$1"
+		get_subdomain_info "$1" "$2"
 	fi
 
 
