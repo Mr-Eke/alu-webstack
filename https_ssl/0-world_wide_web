@@ -10,10 +10,10 @@ get_subdomain_info() {
 # Display info for entire subdomains if only 1 arg (domain) is provided, but
 # if 2 args (doamin and subdomain) are provided, display info for the specified subdomain
 if [ "$#" == 1 ]; then
+	get_subdomain_info "$1" "www"
+	get_subdomain_info "$1" "lb-01"
 	get_subdomain_info "$1" "web-01"
 	get_subdomain_info "$1" "web-02"
-	get_subdomain_info "$1" "lb-01"
-	get_subdomain_info "$1" "www"
 
 	elif [ "$#" == 2 ]; then
 		get_subdomain_info "$1" "$2"
